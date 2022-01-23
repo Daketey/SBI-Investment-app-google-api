@@ -1,0 +1,54 @@
+.bar{
+    display: flex;
+    height: 8.3vh;
+    
+  }
+  .brand{
+    flex-direction: row;
+    background-color: green;
+    color: white;
+    padding-left: 2vh;
+    font-size: 3.5vh;
+    width: 23vh;
+    
+   
+  }
+  
+  .search{
+    flex-direction: row;
+    background-color: rgb(28, 156, 28);
+    text-align: center;
+    width: 190vh;
+    
+  }
+  
+  
+  
+  .btn1{
+    margin-right: 30vh;
+    background-color: rgb(28, 156, 28);
+    color: white;
+    border: none;
+    
+  }
+  .btn2{
+    margin-left: 35vh;
+    background-color: rgb(28, 156, 28);
+    color: white;
+    border: none;
+  }
+  .btn3{
+    margin-left: 3vh;
+    background-color: rgb(28, 156, 28);
+    color: white;
+    border: none;
+  }
+
+
+  
+
+  ::placeholder{
+      color: white;
+  }
+
+ 
