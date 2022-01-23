@@ -117,6 +117,7 @@ const getSipData= async(req, res)=>{
         success: true,
         message: "Successfully Fetched",
         date: dates_debug,
+        count:count,
         hybridSip:  ((hybrid-(value*count))/(value*count))*100 ,
         hybrid: hybrid,
         equitySip:  ((equity-(value*count))/(value*count))*100 ,
