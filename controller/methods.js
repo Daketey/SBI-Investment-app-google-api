@@ -4,6 +4,20 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const calender = {
+    Jan: "01",
+    Feb: "02",
+    Mar: "03",
+    Apr: "04",
+    May: "05",
+    Jun: "06",
+    Jul: "07",
+    Aug: "08",
+    Sept: "09",
+    Oct: "10",
+    Nov: "11",
+    Dec: "12"
+}
 
 const root = (req, res)=> {
     // res.sendFile(path.resolve(__dirname, '../view/build', 'index.html'));
@@ -13,20 +27,6 @@ const root = (req, res)=> {
 const getSipData= async(req, res)=>{
     let from =  req.query.fromDate;
     let to = req.query.toDate;
-    const calender = {
-        Jan: "01",
-        Feb: "02",
-        Mar: "03",
-        Apr: "04",
-        May: "05",
-        Jun: "06",
-        Jul: "07",
-        Aug: "08",
-        Sept: "09",
-        Oct: "10",
-        Nov: "11",
-        Dec: "12"
-    }
     from  = from.split('-')
     to = to.split('-')
     from = from[2]+'-'+calender[from[1]]+'-'+from[0]
@@ -135,20 +135,6 @@ const getSipData= async(req, res)=>{
 const getMutualData = async(req,res)=>{
     let from =  req.query.fromDate;
     let to = req.query.toDate;
-    const calender = {
-        Jan: "01",
-        Feb: "02",
-        Mar: "03",
-        Apr: "04",
-        May: "05",
-        Jun: "06",
-        Jul: "07",
-        Aug: "08",
-        Sept: "09",
-        Oct: "10",
-        Nov: "11",
-        Dec: "12"
-    }
     from  = from.split('-')
     to = to.split('-')
     from = from[2]+'-'+calender[from[1]]+'-'+from[0]
@@ -200,20 +186,6 @@ const getMutualData = async(req,res)=>{
 const getLifeData = async(req, res) =>{
     let from =  req.query.fromDate;
     let to = req.query.toDate;
-    const calender = {
-        Jan: "01",
-        Feb: "02",
-        Mar: "03",
-        Apr: "04",
-        May: "05",
-        Jun: "06",
-        Jul: "07",
-        Aug: "08",
-        Sept: "09",
-        Oct: "10",
-        Nov: "11",
-        Dec: "12"
-    }
     from  = from.split('-')
     to = to.split('-')
     from = from[2]+'-'+calender[from[1]]+'-'+from[0]

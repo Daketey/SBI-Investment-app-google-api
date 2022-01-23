@@ -4,9 +4,12 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PORT = process.env.PORT || 8000;
+dotenv.config();
+
 
 let app = express();
 app.use(express.json());

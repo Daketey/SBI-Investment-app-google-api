@@ -10,7 +10,7 @@ const insertData = async()=>{
         range: "Sheet1!A:B", //sheet name and range of cells
         valueInputOption: "USER_ENTERED", // The information will be passed according to what the usere passes in as date, number or text
         resource: {
-            values: [["I wannna keeeeppppp lovingg youu", "all the time"]],
+            values: [["User Goo", "the time"]],
         },
     });
 }
