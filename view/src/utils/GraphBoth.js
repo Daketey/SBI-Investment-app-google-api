@@ -127,17 +127,15 @@ export default function Graphcard(){
     const mutual = useSelector((state)=> state.sbiMutual)
     const life = useSelector((state)=> state.sbiLife)
 
-    
-    useEffect(()=>{
-        
-        dispatch({type: "TO_DATE", payload: to.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, '-')});
-        dispatch({type: "FROM_DATE", payload: from.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, '-')});
-        dispatch({type: "SBI_MUTUAL"});
-        dispatch({type: "SBI_LIFE"});
-    }, [])
+    // ** Reference Code **
+    // dispatch({type: "TO_DATE", payload: to.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, '-')});
+        // dispatch({type: "FROM_DATE", payload: from.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, '-')});
+        // dispatch({type: "SBI_MUTUAL"});
+        // dispatch({type: "SBI_LIFE"});
+    // *********************
 
     useEffect(()=>{
-        life?mutual?life.data!=null?mutual.data!=null?renderChart(life.data.date, mutual.data.date, life.data.balance, life.data.bond, life.data.corporate, life.data.equity, life.data.growth, life.data.midcap, mutual.data.hybrid, mutual.data.magEquity, mutual.data.magMidcap, mutual.data.smallcap, mutual.data.focused, mutual.data.large): " ":" ": " ": " ";
+        life&&mutual?life.data!=null&&mutual.data!=null?renderChart(life.data.date, mutual.data.date, life.data.balance, life.data.bond, life.data.corporate, life.data.equity, life.data.growth, life.data.midcap, mutual.data.hybrid, mutual.data.magEquity, mutual.data.magMidcap, mutual.data.smallcap, mutual.data.focused, mutual.data.large): " ":" ";
     }, [life.data])
     const useStyles = makeStyles({
         bigBox: {

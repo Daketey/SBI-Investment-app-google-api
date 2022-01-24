@@ -1,7 +1,10 @@
 import { googleSheetsInstance } from "../model/getGoogleSheetsInstance.js";
 // import {auth} from '../model/auth.js'
+import dotenv from 'dotenv';
 
-const spreadsheetId = "1VPp_VqFgJAKbjiKlgiG_KR77jQbZXwjmt-uBwsEkN1U";
+dotenv.config();
+
+const spreadsheetId = process.env.SHEET_ID;
 
 const insertData = async()=>{
     await googleSheetsInstance.spreadsheets.values.append({

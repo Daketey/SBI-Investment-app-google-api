@@ -85,13 +85,6 @@ export default function Graphcard(){
     const[to, setTo] = useState(new Date());
     const {data} = useSelector((state)=> state.sbiLife)
 
-    
-    useEffect(()=>{
-        
-        dispatch({type: "TO_DATE", payload: to.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, '-')});
-        dispatch({type: "FROM_DATE", payload: from.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, '-')});
-        dispatch({type: "SBI_LIFE"});
-    }, [])
 
     useEffect(()=>{
         data!=null?renderChart(data.date, data.balance, data.bond, data.corporate, data.equity, data.growth, data.midcap): " ";

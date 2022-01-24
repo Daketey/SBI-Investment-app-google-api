@@ -85,14 +85,6 @@ export default function Graphcard(){
     const[to, setTo] = useState(new Date());
     const {data} = useSelector((state)=> state.sbiMutual)
 
-    
-    useEffect(()=>{
-        
-        dispatch({type: "TO_DATE", payload: to.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, '-')});
-        dispatch({type: "FROM_DATE", payload: from.toLocaleDateString('en-GB', {day: '2-digit', month: 'short', year: 'numeric'}).replace(/ /g, '-')});
-        dispatch({type: "SBI_MUTUAL"});
-    }, [])
-
     useEffect(()=>{
         data!=null?renderChart(data.date, data.hybrid, data.magEquity, data.magMidcap, data.smallcap, data.focused, data.large): " ";
     }, [data])
