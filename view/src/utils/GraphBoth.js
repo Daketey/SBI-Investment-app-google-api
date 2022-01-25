@@ -115,7 +115,7 @@ const renderChart=(x_axis1, x_axis2 ,y_axis1, y_axis2, y_axis3, y_axis4, y_axis5
             
             ]
     });
-    chart.setSize(1100, 600);
+    chart.setSize(1050, 550);
     return chart;
 }
 
